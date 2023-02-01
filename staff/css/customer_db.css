@@ -1,0 +1,60 @@
+@font-face { font-family: "Overwatch"; src: url("http://us.battle.net/forums/static/fonts/bignoodletoo/bignoodletoo.woff") format('woff'); }
+body{
+    background-image: url("bgimage.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    backface-visibility: visible;
+}
+.nwrapper { margin: 0 auto; justify-content: center; display: flex; flex-wrap: wrap; }
+.section { position: relative; font-family: 'Overwatch'; transition: 0.5s all; min-width: 398px; height: 120px; border: 1px solid black; display: inline-block; padding: 0; color: black; margin: 20px; }
+.fill { transition: 0.5s all; filter: grayscale(50%) brightness(40%); position: absolute; top: 0; left: 0; width: 100%; height: 100%;  }
+.section:hover .fill { filter: grayscale(0%) brightness(70%); }
+.section:hover { text-shadow: 0 0 35px white, 2px 2px 0 white; }
+.desc { transition: 0.5s all; position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.section:hover .desc { height: 200%; top: -50%; z-index: 1; box-shadow: 0 0 125px black, 0 10px 50px black, 0 25px 30px black; }
+.section:hover .rank { z-index: 1; opacity: 1 }
+.section:hover .id_no { left: calc(50% + 30px); z-index: 1; opacity: 1 }
+.section:hover .id { right: calc(50% + 40px); z-index: 1; opacity: 1 }
+.section:hover .number { left: calc(50% + 30px); z-index: 1; opacity: 1 }
+.section:hover .phone { right: calc(50% + 40px); z-index: 1; opacity: 1 }
+.section:hover .checkin{right: calc(50% + 40px); z-index: 1; opacity: 1}
+.section:hover .checkin_date{right: calc(50% + 30px); z-index: 1; opacity: 1}
+.section:hover .checkout{right: calc(50% + 40px); z-index: 1; opacity: 1}
+.section:hover .checkout_date{right: calc(50% + 30px); z-index: 1; opacity: 1}
+.section:hover .myform{right: calc(50% + 30px); z-index: 1; opacity: 1}
+.section:hover .heros { bottom: 75px; z-index: 1; opacity: 1 }
+.section:hover .mapname, .section:hover .name, .section:hover .room { z-index: 1; }
+.section:hover .darkside { z-index: 0; }
+
+.darkside { z-index: -1; position: absolute; bottom: 0px; height: 130px; left: 0; width: 100%; background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.75)); }
+.mapname { font-family: 'Overwatch'; position: absolute; bottom: -10px; left: 0px; width: 100%; text-align: center; font-size: 30px; color: white; }
+.name { font-family: 'Overwatch'; position: absolute; top: 20px; left: 0px; width: 100%; font-size: 55px; height: 40px; line-height: 40px; text-align: center; }
+.room { font-family: 'Overwatch'; position: absolute; top: 58px; left: 0px; width: 100%; font-size: 20px; height: 40px; line-height: 40px; text-align: center; }
+.id { transition: 0.5s all; opacity: 0; font-family: 'Overwatch'; position: absolute; bottom: 37px; width: 88px; right: 50%; font-size: 20px; height: 130px; line-height: 70px; text-align: center; }
+.id_no { transition: 0.5s all; opacity: 0; font-family: 'Overwatch'; position: absolute; bottom: 37px; width: 88px; left: 50%; font-size: 20px; height: 130px; line-height: 70px; text-align: center; }
+.phone { transition: 0.5s all; opacity: 0; font-family: 'Overwatch'; position: absolute; bottom: 37px; width: 88px; right: 50%; font-size: 20px; height: 100px; line-height: 50px; text-align: right; }
+.number { transition: 0.5s all; opacity: 0; font-family: 'Overwatch'; position: absolute; bottom: 37px; width: 88px; left: 50%; font-size: 20px; height: 100px; line-height: 50px; text-align: center; }
+.checkin { transition: 0.5s all; opacity: 0; font-family: 'Overwatch'; position: absolute; bottom: 37px; width: 88px; right: 50%; font-size: 20px; height: 70px; line-height: 30px; text-align: left; }
+.checkin_date { transition: 0.5s all; opacity: 0; font-family: 'Overwatch'; position: absolute; bottom: 37px; width: 88px; left: 57%; font-size: 20px; height: 70px; line-height: 30px; text-align: center; }
+.checkout { transition: 0.5s all; opacity: 0; font-family: 'Overwatch'; position: absolute; bottom: 37px; width: 88px; right: 50%; font-size: 20px; height: 40px; line-height: 10px; text-align: left; }
+.checkout_date { transition: 0.5s all; opacity: 0; font-family: 'Overwatch'; position: absolute; bottom: 37px; width: 88px; left: 57%; font-size: 20px; height: 40px; line-height: 10px; text-align: center; }
+.myform { transition: 0.5s all; opacity: 0; font-family: 'Overwatch'; position: absolute; bottom: 37px; width: 88px; left: 40%; font-size: 20px; height: 20px; line-height: 0px; text-align: center; }
+.rank { transition: 0.5s all; opacity: 0; position: absolute; bottom: 26px; right: calc(50% - 33px); width: 68px; font-size: 20px; height: 68px; line-height: 40px; }
+.heros { transition: 0.5s all; opacity: 0; position: absolute; bottom: 20px; width: 100%; left: 0; height: 60px; line-height: 60px; }
+.herosc { position: relative; margin: 0 auto; }
+.hex { width: 40px; height: 40px; position: relative; float: left; }
+
+.dorado { background: url("http://res.frozent.pl/ow/maps/dorado.jpg") center center; background-size: cover; background-repeat: no-repeat; }
+.eich { background-color:  white;}
+.watch { background: url("http://res.frozent.pl/ow/maps/watchpoint_gibraltar.jpg") center center; background-size: cover; background-repeat: no-repeat; }
+.hana { background: url("http://res.frozent.pl/ow/maps/hanamura.jpg") center center; background-size: cover; background-repeat: no-repeat; }
+.holly { background: url("http://res.frozent.pl/ow/maps/hollywood.jpg") center center; background-size: cover; background-repeat: no-repeat; }
+.ilios { background: url("http://res.frozent.pl/ow/maps/ilios.jpg") center center; background-size: cover; background-repeat: no-repeat; }
+.krow { background: url("http://res.frozent.pl/ow/maps/kings_row.jpg") center center; background-size: cover; background-repeat: no-repeat; }
+.tower { background: url("http://res.frozent.pl/ow/maps/lijiang_tower.jpg") center center; background-size: cover; background-repeat: no-repeat; }
+.nepal { background: url("http://res.frozent.pl/ow/maps/nepal.png") center center; background-size: cover; background-repeat: no-repeat; }
+.num { background: url("http://res.frozent.pl/ow/maps/numbani.jpg") center center; background-size: cover; background-repeat: no-repeat; }
+.oasis { background: url("http://res.frozent.pl/ow/maps/oasis.jpg") center center; background-size: cover; background-repeat: no-repeat; }
+.road { background: url("http://res.frozent.pl/ow/maps/route_66.jpg") center center; background-size: cover; background-repeat: no-repeat; }
+.temp { background: url("http://res.frozent.pl/ow/maps/temple_of_anubis.jpg") center center; background-size: cover; background-repeat: no-repeat; }
+.volk { background: url("http://res.frozent.pl/ow/maps/volskaya_industries.jpg") center center; background-size: cover; background-repeat: no-repeat; }
