@@ -12,14 +12,34 @@
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" href="css/new_css.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 		<script src="js/modernizr.custom.js"></script>
 		<style>
+			#signup{
+						background-color: #583672;
+						margin-left: 100px;
+						color: white;
+						border-radius: 8px;
+						font-weight: bold;
+						-webkit-box-shadow: 0px 9px 15px -11px rgba(88,54,114,1);
+						-moz-box-shadow: 0px 9px 15px -11px rgba(88,54,114,1);
+						box-shadow: 0px 9px 15px -11px rgba(88,54,114,1);
+						border: none;
+						padding: 15px 70px;
+						border-radius: 8px;
+						display: block;
+						margin: auto;
+						margin-top: 20px;
+						margin-bottom: 30px;
+						
+    					}
 			#wrapper {
-            			  width: 500px;
-             			 height: 50%;
+            			  width: 600px;
+             			 height: 100vh;
             			 overflow: hidden;
               			border: 0px solid #000;
-              			margin: 50px auto;
+              			margin: auto;
              			 padding: 10px;
            			 }
   			.main-content {
@@ -73,6 +93,28 @@
 			div{
 				display:block;
 			}
+			.left .contact{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				align-self: center;
+				height: 100%;
+				width: 90%;
+				margin: auto;
+				
+  			}
+			  .left input {
+					border: none;
+					width: 100%;
+					margin: 10px 10px;
+					border-bottom: 1px solid #4f30677d;
+					padding: 7px 7px;
+					width: 100%;
+					overflow: hidden;
+					background: transparent;
+					font-weight: 600;
+					font-size: 14px;
+				}
 		</style>
 	</head>
 	<body>
@@ -114,6 +156,9 @@
             function status(){
                 window.location="check_status.jsp";
             }
+			function logout(){
+				window.location.replace("logout.jsp");
+			}
 		</script>
 		<div class="container">
 			<ul id="gn-menu" class="gn-menu-main">
@@ -128,7 +173,7 @@
 								<li><a class="gn-icon gn-icon-cog" onclick="cancel()">cancel reservation</a></li>
 								<li><a class="gn-icon gn-icon-help" onclick="status()">check status</a></li>
 								<li>
-									<a class="gn-icon gn-icon-archive" href="customer.html">log out</a>
+									<a class="gn-icon gn-icon-archive" onclick="logout()">log out</a>
 								</li>
 							</ul>
 						</div><!-- /gn-scroller -->
@@ -144,13 +189,27 @@
                   <p style="color: darkgray ;font-family: 'Times New Roman', Times, serif; font-size: large;text-align: center;margin-top:0px">Happy booking!!</p>
                 </div>
               </div>
-              <div class="l-part">
-               <form action="book.jsp" method="post">
-                <input type="text"   class="input-2" value=  '<%=fullname%>'  name="fname" readonly/>
-                <input type="text"   class="input-1" value= '<%=phone%>'  name="pno" readonly />
-                <input type="submit" value="book" class="btn" />
-          </form>
-      </div>
+			  <div class="left">
+				<div class="contact">
+					<form action="book.jsp" method="post">
+						<input type="text"   value=  '<%=fullname%>'  name="fname" readonly/>
+						<input type="text"   value= '<%=phone%>'  name="pno" readonly /><br>
+						<select name="room_type" id="rtype" class="input-1" required>
+							<option value="" disabled selected hidden>Select room type</option>
+							<option value="1">Premium Suit</option>
+							<option value="2">VIP Suit</option>
+							<option value="3">Connecting room</option>
+							<option value="4">Double</option>
+							<option value="5">Single</option>
+						</select>
+						<select name="payment_method" class="input-1" required>
+							<option value="" disabled selected hidden>Select payment method </option>
+							<option value="cash">cash</option>
+						</select>
+						<button id="signup">Book</button> 
+					</form>
+				</div>
+			</div>
 		<script src="js/classie.js"></script>
 		<script src="js/gnmenu.js"></script>
 		<script>

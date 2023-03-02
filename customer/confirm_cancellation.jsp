@@ -12,8 +12,28 @@
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" href="css/new_css.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 		<script src="js/modernizr.custom.js"></script>
 		<style>
+			#signup{
+						background-color: #583672;
+						margin-left: 100px;
+						color: white;
+						border-radius: 8px;
+						font-weight: bold;
+						-webkit-box-shadow: 0px 9px 15px -11px rgba(88,54,114,1);
+						-moz-box-shadow: 0px 9px 15px -11px rgba(88,54,114,1);
+						box-shadow: 0px 9px 15px -11px rgba(88,54,114,1);
+						border: none;
+						padding: 10px 20px;
+						border-radius: 8px;
+						display: block;
+						margin: auto;
+						margin-top: 10px;
+						margin-bottom: 20px;
+						
+    					}
 			#wrapper {
             			  width: 500px;
              			 height: 50%;
@@ -93,6 +113,9 @@
             function status(){
                 window.location="check_status.jsp";
             }
+			function logout(){
+				window.location.replace("logout.jsp");
+			}
 		</script>
 		<div class="container">
 			<ul id="gn-menu" class="gn-menu-main">
@@ -107,7 +130,7 @@
 								<li><a class="gn-icon gn-icon-cog" onclick="cancel()">cancel reservation</a></li>
 								<li><a class="gn-icon gn-icon-help" onclick="status()">check status</a></li>
 								<li>
-									<a class="gn-icon gn-icon-archive" href="logout.jsp">log out</a>
+									<a class="gn-icon gn-icon-archive" onclick="logout()">log out</a>
 								</li>
 							</ul>
 						</div><!-- /gn-scroller -->
@@ -120,12 +143,14 @@
                 <div class="header">
                     <h2 style="color: aqua; font-family: Snell Roundhand, cursive; text-align: center;">Hotel Newbie</h2>
                 </div><br>
-            <div class="l-part">
-                <form action="cancel_reservation.jsp">
-                <input type="number" placeholder="booking id" class="input-1" name="booking_id" />
-                <input type="submit" value="confirm" class="btn" />
-                </form>
-            </div>
+				<div class="left">
+					<div class="contact">
+						<form action="cancel_reservation.jsp" method="post">
+							<input type="number" placeholder="Enter booking id"  name="booking_id" />
+							<button id="signup">Confirm</button> 
+						</form>
+					</div>
+				</div>
         </div>
 		<script src="js/classie.js"></script>
 		<script src="js/gnmenu.js"></script>

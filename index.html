@@ -1,79 +1,261 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <style>
-            * {
-                margin: 0px;
-                padding: 0px;
-            }
+<head>
+<title>Hotel Newbie</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+#stay{
+  margin-top: 250px;
+				text-align: center;
+				color: bisque;
+				font-size: 70px;
+        margin-left: 70px;
+				font-family: 'Times New Roman', Times, serif;
+				font-style: normal;
+				font-weight: 500;
+			}
+			#feel{
+        margin-top: 340px;
+				text-align: center;
+				color:gold;
+        margin-left: 70px;
+				font-size:20px;
+				font-family: Arial, Helvetica, sans-serif;
+				font-style: normal;
+				font-weight: 300;
+			}
+      #s{
+  margin-top: 50px;
+  
+				text-align: center;
+				color: bisque;
+        margin-left: 750px;
+				font-size: 40px;
+				font-family: 'Times New Roman', Times, serif;
+				font-style: normal;
+				font-weight: 500;
+			}
+			#f{
+        margin-top: 120px;
+        margin-left: 750px;
+				text-align: center;
+				color:gold;
+				font-size:20px;
+				font-family: Arial, Helvetica, sans-serif;
+				font-style: normal;
+				font-weight: 300;
+			}
+</style>
+</head>
+<body class="w3-light-grey">
 
-            body {
-                background-image: url(bgimage.webp);
-                background-repeat: no-repeat;
-                background-size: cover;
-                backface-visibility: visible;
-            }
-            #wrapper {
-                width: 500px;
-                height: 50%;
-                overflow: hidden;
-                border: 0px solid #000;
-                margin: 50px auto;
-                padding: 10px;
-            }
-            .main-content {
-                width: 250px;
-                height: 40%;
-                margin: 10px auto;
-                background-color: #fff;
-                border: 2px solid #e6e6e6;
-                padding: 40px 50px;
-            }
-            .btn {
-                width: 50%;
-                background-color: #3897f0;
-                border: 1px solid #3897f0;
-                padding: 5px 12px;
-                margin-bottom: 10px;
-                color: #fff;
-                font-weight: bold;
-                font-size: large;
-                cursor: pointer;
-                border-radius: 3px;
-            }
-            .header {
-                border: 0px solid #000;
-                margin-bottom: 10px;
-            }
-            .l-part{
-                text-align: center;
-            }
-            input:focus {
-                background-color: yellow;
-            }
-        </style>
-    </head>
-    <body>
-        <script>
-            function cust(){
-                window.open("./customer/customer.html", '_self');
-            }
-            function staff(){
-                window.open("./staff/staff.html", '_self');
-            }
-        </script>
-        <div id="wrapper">
-            <div class="main-contnet">
-                <div class="header">
-                    <h2 style="color: aqua; font-family: Snell Roundhand, cursive; text-align: center;">Welcome to Hotel Newbie</h2>
-                </div>
-                <div class="l-part">
-                    <form action="">
-                        <input  type="button" value="Customer login" class="btn" onclick="cust()"/>
-                        <input  type="button" value="Staff login" class="btn" onclick="staff()" />
-                    </form>
-                </div>
-            </div>
+<!-- Navigation Bar -->
+<div class="w3-bar w3-white w3-large">
+  <a href="#" class="w3-bar-item w3-button w3-red w3-mobile"><i class="fa fa-bed w3-margin-right"></i><strong>Home</strong></a>
+  <a href="#rooms" class="w3-bar-item w3-button w3-mobile"><strong>Rooms</strong></a>
+  <a href="#about" class="w3-bar-item w3-button w3-mobile"><strong>About</strong></a>
+  <a href="#contact" class="w3-bar-item w3-button w3-mobile"><strong>Contact</strong></a>
+  <a href="login.html" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile"><strong>Login/Signup</strong></a>
+</div>
+<!-- Header -->
+<header class="w3-display-container w3-content" style="max-width:1500px;">
+  <div class="centered1" style="position: absolute;"><h1 id="s">Stay once, carry memories forever.</h1>	</div>
+    <div class="centered2" style="position: absolute;"><h4 id="f">See life from a different perspective.</h4></div>
+  <img class="w3-image" src="bgimage1.webp" alt="The Hotel" style="min-width:1000px" width="1500" height="800">
+  <div class="w3-display-left w3-padding w3-col l6 m8">
+    <div class="centered1" style="position: absolute;"><h1 id="stay">Hotel Newbie </h1>	</div>
+    <div class="centered2" style="position: absolute;"><h4 id="feel">A whole different world!</h4></div>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1532px;">
+
+  <div class="w3-container w3-margin-top" id="rooms">
+    <h3><strong>Rooms</strong></h3>
+    <p>Make yourself at home is our slogan. We offer the best beds in the industry. Sleep well and rest well.</p>
+  </div>
+  <div class="w3-row-padding w3-padding-16">
+    <div class="w3-third w3-margin-bottom">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZXEK4m99vAx1ef-1LVsW6F1Ta_N7qWmu77Q&usqp=CAU" alt="Norway" style="width:100%">
+      <div class="w3-container w3-white">
+        <h3>Premuim suit</h3>
+        <h6 class="w3-opacity">From $299</h6>
+        <p>King-size bed</p>
+        <p>40m<sup>2</sup></p>
+        
+      </div>
+    </div>
+    
+    <div class="w3-third w3-margin-bottom">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtk6UiDTByJxRxQJEVKqg8zMSlt7DyvenGTQ&usqp=CAU" style="width:100%">
+      <div class="w3-container w3-white">
+        <h3>VIP suit</h3>
+        <h6 class="w3-opacity">From $299</h6>
+        <p>Queen-size bed</p>
+        <p>25m<sup>2</sup></p>
+        
+      </div>
+    </div>
+    <div class="w3-third w3-margin-bottom">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT36PsG1dDC5LqxGKXFDJyMD6A1LlRP9m_hkA&usqp=CAU"  style="width:100%">
+      <div class="w3-container w3-white">
+        <h3>Connecting</h3>
+        <h6 class="w3-opacity">From $199</h6>
+        <p>King-size bed</p>
+        <p>40m<sup>2</sup></p>
+        
+      </div>
+    </div>
+    <div class="w3-third w3-margin-bottom">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXgeMjemcsaeBiq48_vx2DfJQGltzGpqLsCUjGDKAN0s836HlG6NfgCcLzA0F05m81tug&usqp=CAU" alt="Norway" style="width:100%">
+      <div class="w3-container w3-white">
+        <h3>Double</h3>
+        <h6 class="w3-opacity">From $149</h6>
+        <p>King-size bed</p>
+        <p>40m<sup>2</sup></p>
+        
+      </div>
+    </div>
+    <div class="w3-third w3-margin-bottom">
+      <img src="https://www.berjayahotel.com/sites/default/files/C1_Classic%20Double%20Room.jpg" alt="Norway" style="width:100%">
+      <div class="w3-container w3-white">
+        <h3>Single Room</h3>
+        <h6 class="w3-opacity">From $99</h6>
+        <p>Single bed</p>
+        <p>15m<sup>2</sup></p>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="w3-row-padding" id="about">
+    <div class="w3-col l4 12">
+      <h3><strong>About</strong></h3>
+      <h6>A holiday is an opportunity to journey within. It is also a chance to chill, relax. Our hotel Newbiie is one of best kind to relax. It is truely amazing. Our modern rooms start with big bouncy beds. The polished rooms feature free Wi-Fi, flat-screens, minibars, and balconies or terraces with garden views. Suites add kitchenettes and living rooms and some have gulf views. We have added super soft linens and fluffy pillows. We have packd our rooms with beautiful stuff that we love. You might never want to leave your room and that's cool with us! Enjoy the fresh breeze and the island vibes at the reach of your hand. Room service is available 24/7. Dining options include plush restaurants serving and international dishes, plus a several cafes. Other amenities include gyms, hot tubs, an indoor pool. A childrens play area , a kids pool with slides and sports courts are also available. Upgraded units offer access to a lounge with free drinks. Our superior rooms have all you need for a carefree stay. Explore the city extensively or enjoy a relaxing night in. Get luxurious accomodation and have a great experience. The choice is upto you! Come chill with us. </h6>
+    <p>We accept: <i class="fa fa-credit-card w3-large"></i> <i class="fa fa-cc-mastercard w3-large"></i> <i class="fa fa-cc-amex w3-large"></i> <i class="fa fa-cc-cc-visa w3-large"></i><i class="fa fa-cc-paypal w3-large"></i></p>
+    </div>
+    <div class="w3-col l8 12">
+      <!-- Image of location/map -->
+      <img src="bgimage.webp" class="w3-image w3-greyscale" style="width:100%;">
+    </div>
+  </div>
+  
+  <div class="w3-row-padding w3-large w3-center" style="margin:32px 0">
+    <div class="w3-third"><i class="fa fa-map-marker w3-text-red"></i> 423 Some adr, Chicago, US</div>
+    <div class="w3-third"><i class="fa fa-phone w3-text-red"></i> Phone: +00 151515</div>
+    <div class="w3-third"><i class="fa fa-envelope w3-text-red"></i> Email: mail@mail.com</div>
+  </div>
+
+  <div class="w3-panel w3-red w3-leftbar w3-padding-32">
+    <h6><i class="fa fa-info w3-deep-orange w3-padding w3-margin-right"></i> On demand, we can offer playstation, babycall, children care, dog equipment, etc.</h6>
+  </div>
+
+  <div class="w3-container">
+    <h3><strong>Our Hotels</strong></h3>
+    <h6>You can find our hotels anywhere in the world:</h6>
+  </div>
+  
+  <div class="w3-row-padding w3-padding-16 w3-text-white w3-large">
+    <div class="w3-half w3-margin-bottom">
+      <div class="w3-display-container">
+        <img src="bgimage2.jpg" alt="Cinque Terre" style="width:100%">
+        <span class="w3-display-bottomleft w3-padding">Cinque Terre</span>
+      </div>
+    </div>
+    <div class="w3-half">
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half w3-margin-bottom">
+          <div class="w3-display-container">
+            <img src="bgimage3.jpg" alt="New York" style="width:100%">
+            <span class="w3-display-bottomleft w3-padding">New York</span>
+          </div>
         </div>
-    </body>
+        <div class="w3-half w3-margin-bottom">
+          <div class="w3-display-container">
+            <img src="bgimage4.jpg" alt="San Francisco" style="width:100%">
+            <span class="w3-display-bottomleft w3-padding">San Francisco</span>
+          </div>
+        </div>
+      </div>
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half w3-margin-bottom">
+          <div class="w3-display-container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbWalsTgoPAjGFdo34S8rnKrpgvgM46HNQvPwPfUEwy_xkthgoaJJ9Vucu9xWqaum6qos&usqp=CAU" alt="Pisa" style="width:100%">
+            <span class="w3-display-bottomleft w3-padding">Pisa</span>
+          </div>
+        </div>
+        <div class="w3-half w3-margin-bottom">
+          <div class="w3-display-container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjPCLk5tbC_jBGfs2Ru9sRsL6jEUF_h-5v5Q&usqp=CAU" alt="Paris" style="width:100%">
+            <span class="w3-display-bottomleft w3-padding">Paris</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-container" id="contact">
+    <h2><strong>Contact</strong></h2>
+    <p>If you have any questions, do not hesitate to ask them.</p>
+    <i class="fa fa-map-marker w3-text-red" style="width:30px"></i> Chicago, US<br>
+    <i class="fa fa-phone w3-text-red" style="width:30px"></i> Phone: +00 151515<br>
+    <i class="fa fa-envelope w3-text-red" style="width:30px"> </i> Email: mail@mail.com<br>
+    <form action="thank.html">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p><button class="w3-button w3-black w3-padding-large" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-padding-32 w3-black w3-center w3-margin-top">
+  <h5>Find Us On</h5>
+  <div class="w3-xlarge w3-padding-16">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p>Sai Ram Madala <br>Kavya Suggula
+  </p>
+  <br>
+  <p class="site-footer__fineprint" id="fineprint">Copyright ©2014 | All Rights Reserved</p>
+</footer>
+
+<!-- Add Google Maps -->
+<script>
+function myMap() {
+  myCenter=new google.maps.LatLng(41.878114, -87.629798);
+  var mapOptions= {
+    center:myCenter,
+    zoom:12, scrollwheel: false, draggable: false,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+  var marker = new google.maps.Marker({
+    position: myCenter,
+  });
+  marker.setMap(map);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
+</body>
 </html>

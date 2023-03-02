@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/new_css.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <style>
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+            #signup{
+                    background-color: #583672;
+                    margin-left: 100px;
+                    margin-top: 30px;
+                    color: white;
+                    border-radius: 8px;
+                    font-weight: bold;
+                    -webkit-box-shadow: 0px 9px 15px -11px rgba(88,54,114,1);
+                    -moz-box-shadow: 0px 9px 15px -11px rgba(88,54,114,1);
+                    box-shadow: 0px 9px 15px -11px rgba(88,54,114,1);
+                    border: none;
+                    padding: 15px 50px;
+                    border-radius: 8px;
+                    display: block;
+                    margin: auto;
+                    margin-top: 30px;
+                    }
+            body {
+                background-image: url(bgimage.webp);
+                background-repeat: no-repeat;
+                background-size: cover;
+                backface-visibility: visible;
+            }
+            #wrapper {
+                width: 500px;
+                height: 50%;
+                overflow: hidden;
+                border: 0px solid #000;
+                margin: 50px auto;
+                padding: 10px;
+            }
+            .main-content {
+                width: 250px;
+                height: 40%;
+                margin: 10px auto;
+                background-color: #fff;
+                border: 2px solid #e6e6e6;
+                padding: 40px 50px;
+            }
+            .btn {
+                width: 50%;
+                background-color: #3897f0;
+                border: 1px solid #3897f0;
+                padding: 5px 12px;
+                margin-bottom: 10px;
+                color: #fff;
+                font-weight: bold;
+                font-size: large;
+                cursor: pointer;
+                border-radius: 3px;
+            }
+            .header {
+                border: 0px solid #000;
+                margin-bottom: 10px;
+            }
+            .l-part{
+                text-align: center;
+            }
+            input:focus {
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            function cust(){
+                window.open("./customer/customer.html", '_self');
+            }
+            function staff(){
+                window.open("./staff/staff.html", '_self');
+            }
+        </script>
+        <section class="login">
+			<div class="login_box">
+				<div class="left">
+					<div class="top_link"><a href="index.html"><img src="https://drive.google.com/u/0/uc?id=16U__U5dJdaTfNGobB_OpwAJ73vM50rPV&export=download" alt="">Return home</a></div>
+					<div class="contact">
+						<form action=" ">
+							<h2 style="color:#583672;text-align: center;font-family: serif;">Welcome back!</h2><br>
+                            <p style="text-align: center;font-family: constantia;">Come stay with us! Enjoy your dream vacation. Have a great experience </p>
+                            <input  type="button" value="Customer login" id="signup" onclick="cust()"/>
+                            <input  type="button" value="Staff login" id="signup" onclick="staff()" />
+							<br>
+                            <p style="text-align: center; color: #000;font-family: 'Times New Roman', Times, serif;">Thank You!</p>
+						</form>
+					</div>
+				</div>
+				<div class="right">
+					<div class="right-text">
+						<h2 style="color:#583672">Newbie</h2>
+						<h5 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">A Symbol for hospitality</h5>
+					</div>
+					<div class="right-inductor"><img src="https://lh3.googleusercontent.com/fife/ABSRlIoGiXn2r0SBm7bjFHea6iCUOyY0N2SrvhNUT-orJfyGNRSMO2vfqar3R-xs5Z4xbeqYwrEMq2FXKGXm-l_H6QAlwCBk9uceKBfG-FjacfftM0WM_aoUC_oxRSXXYspQE3tCMHGvMBlb2K1NAdU6qWv3VAQAPdCo8VwTgdnyWv08CmeZ8hX_6Ty8FzetXYKnfXb0CTEFQOVF4p3R58LksVUd73FU6564OsrJt918LPEwqIPAPQ4dMgiH73sgLXnDndUDCdLSDHMSirr4uUaqbiWQq-X1SNdkh-3jzjhW4keeNt1TgQHSrzW3maYO3ryueQzYoMEhts8MP8HH5gs2NkCar9cr_guunglU7Zqaede4cLFhsCZWBLVHY4cKHgk8SzfH_0Rn3St2AQen9MaiT38L5QXsaq6zFMuGiT8M2Md50eS0JdRTdlWLJApbgAUqI3zltUXce-MaCrDtp_UiI6x3IR4fEZiCo0XDyoAesFjXZg9cIuSsLTiKkSAGzzledJU3crgSHjAIycQN2PH2_dBIa3ibAJLphqq6zLh0qiQn_dHh83ru2y7MgxRU85ithgjdIk3PgplREbW9_PLv5j9juYc1WXFNW9ML80UlTaC9D2rP3i80zESJJY56faKsA5GVCIFiUtc3EewSM_C0bkJSMiobIWiXFz7pMcadgZlweUdjBcjvaepHBe8wou0ZtDM9TKom0hs_nx_AKy0dnGNWI1qftTjAg=w1920-h979-ft" alt=""></div>
+				</div>
+			</div>
+		</section>
+    </body>
+</html>

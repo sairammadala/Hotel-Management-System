@@ -31,6 +31,14 @@
 		if(session.getAttribute("usr") == null)
 			response.sendRedirect("staff.html");
         %>
+        <%
+		int id = Integer.parseInt(request.getParameter("id"));
+		String name = request.getParameter("name");
+		String phno = request.getParameter("phno");
+		String in_date = request.getParameter("in_date");
+		String out_date = request.getParameter("out_date");
+        int room_type = Integer.parseInt(request.getParameter("rtype"));
+		%>
         <%@ page import = "java.sql.*"%>
         <%
         int count=0;
@@ -43,7 +51,7 @@
         conn = DriverManager.getConnection(URL, USER, PASS);
         stmt = conn.createStatement();
         try{
-            sql = "SELECT COUNT(room_number) count FROM room where room_assigned_status=0;";
+            sql = String.format("SELECT COUNT(room_number) count FROM room where room_assigned_status=0 and type=%d;", room_type);
             ResultSet rs = stmt.executeQuery(sql);
             while(rs.next())
             {
@@ -62,7 +70,7 @@
             String sql1;
             try
             {
-                sql1 = "select room_number, type from room where room_assigned_status=0;";
+                sql1 = String.format("select room_number, type from room where room_assigned_status=0 and type=%d;", room_type);
                 ResultSet rs = stmt.executeQuery(sql1);
                 while(rs.next())
                 {
@@ -75,13 +83,6 @@
                 e.printStackTrace();
             }
         %>
-		<%
-		int id = Integer.parseInt(request.getParameter("id"));
-		String name = request.getParameter("name");
-		String phno = request.getParameter("phno");
-		String in_date = request.getParameter("in_date");
-		String out_date = request.getParameter("out_date");
-		%>
         <%for(i=0;i<=count-1;i++){%>
         <div class="section">
         <div class="desc">
@@ -120,6 +121,9 @@
             function room_details(){
                 window.location = "room_details.jsp";
             }
+            function logout(){
+				window.location.replace("logout.jsp");
+			}
         </script>
 		<div class="container">
 			<ul id="gn-menu" class="gn-menu-main">
@@ -141,7 +145,7 @@
 								<li><a class="gn-icon gn-icon-help" onclick="room_details()">Room details</a></li>
 
 								<li>
-									<a class="gn-icon gn-icon-cog" href="staff.html">log out</a>
+									<a class="gn-icon gn-icon-cog" onclick="logout()">log out</a>
 								</li>
 							</ul>
 						</div><!-- /gn-scroller -->

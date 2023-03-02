@@ -68,7 +68,7 @@
         }
         catch(Exception e)
         {
-            System.out.println(e);
+            e.printStackTrace();
         }
         %>
 		<script>
@@ -81,6 +81,9 @@
             function status(){
                 window.location="check_status.jsp";
             }
+			function logout(){
+				window.location.replace("logout.jsp");
+			}
 		</script>
 		<div class="container">
 			<ul id="gn-menu" class="gn-menu-main">
@@ -95,20 +98,20 @@
 								<li><a class="gn-icon gn-icon-cog" onclick="cancel()">cancel reservation</a></li>
 								<li><a class="gn-icon gn-icon-help" onclick="status()">check status</a></li>
 								<li>
-									<a class="gn-icon gn-icon-archive" href="customer.html">log out</a>
+									<a class="gn-icon gn-icon-archive" onclick="logout()">log out</a>
 								</li>
 							</ul>
 						</div><!-- /gn-scroller -->
 					</nav>
 				</li>
-				<li><a class="codrops-icon codrops-icon-prev" href="index.html"><span>Home</span></a></li>			</ul>
+				<li><a class="codrops-icon codrops-icon-prev" href="customer_options.jsp"><span>Home</span></a></li>			</ul>
 			<header>
 				<h1 style="margin-left: 25%;">Hotel newbie<span style="color: yellow;">A whole different world!</span></h1>
                			            <%if(assigned!=0){
-               				 out.println("<h1 style=\" color:yellow;margin-top: 15px;\">you are allocated with a room with number: "+ assigned + "</h1>");
+               				 out.println("<div style=\"background-color: rgb(255, 246, 244);width: 400px;border: 10px solid hsl(0, 18%, 78%);padding-left: 50px;padding-top:50px;padding-bottom:50px;margin-top: 40px;margin-left:230px\"><h2 style=\"color:darkblue;font-family:constantia;\">you are allocated with a <br>room with number: "+ assigned + "</h2></div>");
            					 }
           					  else{
-               				 out.println("<h1 style=\"margin-left:15%; color:yellow;margin-top: 15px;\">Room yet to be allocated.</h1>");
+               				 out.println("<div style=\"background-color: rgb(255, 246, 244);width: 400px;border: 10px solid hsl(0, 18%, 78%);padding-left: 50px;padding-top:50px;padding-bottom:50px;margin-top: 40px;margin-left:230px\"><h2 style=\"color:darkblue;font-family:constantia;\">Room yet to be allocated.</h2></div>");
           					  }%>
 			</header> 
 		</div><!-- /container -->

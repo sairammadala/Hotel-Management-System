@@ -119,6 +119,9 @@
             function room_details(){
                 window.location = "room_details.jsp";
             }
+            function logout(){
+				window.location.replace("logout.jsp");
+			}
         </script>
 		<div class="container">
 			<ul id="gn-menu" class="gn-menu-main">
@@ -147,7 +150,7 @@
 								<li><a class="gn-icon gn-icon-help" onclick="room_details()">Room details</a></li>
 
 								<li>
-									<a class="gn-icon gn-icon-cog" href="staff.html">log out</a>
+									<a class="gn-icon gn-icon-cog" onclick="logout()">log out</a>
 								</li>
 							</ul>
 						</div><!-- /gn-scroller -->
